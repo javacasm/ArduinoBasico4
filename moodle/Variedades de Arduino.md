@@ -131,7 +131,7 @@ funcionalidad del conjunto. Existen multitud de shields, entre ellos veamos los 
 
 ![protoshield](imagenes/11ProtoShield_thumb.jpg)
 
-* ** Protoshield ** : permite integrar nuestros propios montajes en una placa Arduino
+* **Protoshield** : permite integrar nuestros propios montajes en una placa Arduino
 
 * * * 
 
