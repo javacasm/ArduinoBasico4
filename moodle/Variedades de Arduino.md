@@ -118,20 +118,20 @@ funcionalidad del conjunto. Existen multitud de shields, entre ellos veamos los 
 
 ![wifi](imagenes/8WiFiShield_thumb_a.jpg)
 
-* ** Wifi **: dispone de conectividad Wifi y un conector para tarjeta SD. Aunque no es lo normal, este shield permite funcionamiento aislado, sin necesidad de Arduino.
+* ** Wifi ** : dispone de conectividad Wifi y un conector para tarjeta SD. Aunque no es lo normal, este shield permite funcionamiento aislado, sin necesidad de Arduino.
 
 ![ethernet](imagenes/9EthernetShield_R3_thumb.jpg)
 
-* ** Ethernet **:añade conectividad ethernet y un conector de tarjeta SD
+* ** Ethernet ** : añade conectividad ethernet y un conector de tarjeta SD
 
 ![motorshield](imagenes/10MotorShield_thumb.jpg)
 
 
-* ** Motor **: este shield dispone de toda la electrónica necesaria para controlar motores con Arduino
+* ** Motor ** : este shield dispone de toda la electrónica necesaria para controlar motores con Arduino
 
 ![protoshield](imagenes/11ProtoShield_thumb.jpg)
 
-* ** Protoshield **: permite integrar nuestros propios montajes en una placa Arduino
+* ** Protoshield ** : permite integrar nuestros propios montajes en una placa Arduino
 
 * * * 
 
