@@ -3,6 +3,8 @@
 ## Introducción a la programacion con bitbloq: 
 [[vídeo]](http://youtu.be/3hqwEtsN-Wk) [[ejemplo Parpadeo]](./ejemplosBitbloq/parpadeo.xml)
 
+![parpadeo](./ejemplosBitbloq/Parpadeo.png)
+
 Bitbloq es un entorno de programación visual por bloques que nos permite programar nuestra placa arduino o compatible de forma sencilla, evitando la complejidad de las sentencias C++
 
 Además nos permite programar nuestro arduino sin instalar (practicamente) nada en nuestro ordenador
@@ -30,23 +32,31 @@ Las funciones de pin son las distintas formas que tenemos de manejar los pines d
 ### Bucle **for**
 [[vídeo]](http://youtu.be/0Af8VdF6h24) [[ejemplo]](./ejemplosBitbloq/bucle_for.xml)
 
+![bucle for](./ejemplosBitbloq/Bucle_for.png)
+
 El bucle **for** permite repetir un conjunto de pasos un número de veces determinado. 
 Necesitamos  declarar una variables que actuará como contador y definir el valor inicial que tendrá la variable y el final, realizándose tantos como pasos como valores enteros haya entre ambas.
 
 ### Bucle **while** 
 [[vídeo]](http://youtu.be/894D9hV8paw) [[ejemplo]](./ejemplosBitbloq/bucle_while.xml)
 
+![bucle while](./ejemplosBitbloq/Bucle_while.png)
+
 Usaremos la sentencia de control **while** para los bucles donde el número de veces que se repite no está definido desde el principio
 
 ### Bloque **if** : sentencias condicionales
 [[vídeo]](http://youtu.be/dXpDCOzsO2U) [[ejemplo]](./ejemplosBitbloq/condicional.xml)
 
+![condicional](./ejemploBitbloq/condicional.png)
+
 Las sentencias condicionales permiten ejecutar un código y otro según se cumpla o no una determinada condición. Esta condición será una validación que definiremos con operandos.
 
 Podemos hacer que en caso de que se cumpla se ejecute un código (es el bloque if) y en caso de que no se cumpla la condición se ejecute otro (bloque else)
 
-### Sentencias condicionales complejas
+### Condicionales complejas
 [[vídeo]](http://youtu.be/en_Y-_wVyO0) [[ejemplo]](./ejemplosBitbloq/condiciones_if.xml)
+
+![Condiciones_lógicas](./ejemplosBitbloq/Condiciones_lógicas.png)
 
 La condición que determina si se ejecuta un bloque u otro o si salimos de un bloque while puede contener varias comprobaciones. 
 
@@ -60,10 +70,14 @@ Entre estas condiciones utilizaremos operadores lógicos que pueden ser AND o OR
 ## Envío de datos al PC: 
 [[vídeo]](http://youtu.be/uAy_reYl8_Y) [[ejemplo]](./ejemplosBitbloq/Serial.xml) 
 
+![serial](./ejemplosBitbloq/Datos_al_pc.png)
+
 Podemos enviar contenidos entre nuestra placa y el PC usando las sentencias de comunicaciones. Usaremos print para enviar algo (puede ser el valor de una variable o un texto) al pc o println para enviar y pasar a la siguiente línea.
 
 ## Variables locales vs Variables globales
 [vídeo](http://youtu.be/D82lXUWH1Jg) [ejemplo](./ejemplosBitbloq/variables_locals_globales.xml)
+
+![ejemplo](./ejemplosBitbloq/variables_locals_globales.png)
 
 Podemos definir variables locales o globales. Una variable global estará definida y por tanto mantendrá su valor en todo el programa, mientras que una variable local solo se definirá donde se haya declarado.
 
