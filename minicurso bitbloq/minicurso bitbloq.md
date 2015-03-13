@@ -62,5 +62,14 @@ Entre estas condiciones utilizaremos operadores lógicos que pueden ser AND o OR
 
 Podemos enviar contenidos entre nuestra placa y el PC usando las sentencias de comunicaciones. Usaremos print para enviar algo (puede ser el valor de una variable o un texto) al pc o println para enviar y pasar a la siguiente línea.
 
+## Variables locales vs Variables globales
+[vídeo](http://youtu.be/D82lXUWH1Jg) [ejemplo](./ejemplosBitbloq/variables_locals_globales.xml)
+
+Podemos definir variables locales o globales. Una variable global estará definida y por tanto mantendrá su valor en todo el programa, mientras que una variable local solo se definirá donde se haya declarado.
+
+Las variables globales mantienen su valor entre las distintas iteraciones que se realizan del programa.
+
+
+
 
 tag bitbloq, arduino, programación
