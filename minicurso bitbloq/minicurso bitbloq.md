@@ -3,7 +3,7 @@
 Bitbloq es un entorno de programación visual que nos permite crear programas para Arduino y placas compatibles y transferir los mismos a las placas de una forma sencilla. 
 
 Podemos acceder directamente desde su web  http://bitbloq.bq.com/
-(En los vídeo se usa la versión beta, que en breve estará disponible, ya que mejora mucho la gestión de las conexiones con las placas)
+(En los vídeo se usa la versión beta http://beta-bitbloq.bq.com/, que en breve será la versión estable, ya que mejora mucho la gestión de las conexiones con las placas)
 
 A lo largo de estos vídeos veremos algunas de sus características más importantes.
 
