@@ -45,21 +45,21 @@ Actualmente son muchas las versiones existentes como podemos ver en la imagen si
 ![4](imagenes/4.png)
     
 
-1. Arduino ** Duemilanove ** es una versión anterior del actual Arduino UNO
+1. Arduino **Duemilanove** es una versión anterior del actual Arduino UNO
 
-2. Arduino ** Bluetooth **, dispone de módulo bluetooth que le permite comunicarse de forma inalaámbrica. No incorpora conector USB
+2. Arduino **Bluetooth**, dispone de módulo bluetooth que le permite comunicarse de forma inalaámbrica. No incorpora conector USB
 
-3. Arduino ** Mega **, es el grande de la familia, dispone de mayor capacidad y más prestaciones que el resto de Arduinos
+3. Arduino **Mega**, es el grande de la familia, dispone de mayor capacidad y más prestaciones que el resto de Arduinos
 
-4. Arduino ** Pro **, el nombre le viene porque tiene un diseño pensado para el uso profesional, y para facilitar su integración con otros componentes. No incorpora conector USB
+4. Arduino **Pro**, el nombre le viene porque tiene un diseño pensado para el uso profesional, y para facilitar su integración con otros componentes. No incorpora conector USB
 
-5. Arduino ** LilyPad **, está pensado para integrase en prendas de vestir. No incorpora USB.
+5. Arduino **LilyPad**, está pensado para integrase en prendas de vestir. No incorpora USB.
 
-6. Arduino ** Nano **, uno de los pequeños de la famila, pero no por ello menos pontente. Incorpora en tan reducido espacio las características del Arduino UNO
+6. Arduino **Nano**, uno de los pequeños de la famila, pero no por ello menos pontente. Incorpora en tan reducido espacio las características del Arduino UNO
 
-7. Arduino ** Pro Mini **, similar en prestaciones al Pro, pero de tamaño más reducido
+7. Arduino **Pro Mini**, similar en prestaciones al Pro, pero de tamaño más reducido
 
-8. Arduino ** Mini **, similar al Arduino pro Mini pero preparado para usuarios domésticos
+8. Arduino **Mini**, similar al Arduino pro Mini pero preparado para usuarios domésticos
 
 ## Los recien llegados
 
