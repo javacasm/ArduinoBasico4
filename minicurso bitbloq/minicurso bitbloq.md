@@ -1,5 +1,12 @@
 # Minicurso Bitbloq
 
+Bitbloq es un entorno de programación visual que nos permite crear programas para Arduino y placas compatibles y transferir los mismos a las placas de una forma sencilla. 
+
+Podemos acceder directamente desde su web  http://bitbloq.bq.com/
+(En los vídeo se usa la versión beta, que en breve estará disponible, ya que mejora mucho la gestión de las conexiones con las placas)
+
+A lo largo de estos vídeos veremos algunas de sus características más importantes.
+
 ## Introducción a la programacion con bitbloq: 
 [[vídeo]](http://youtu.be/3hqwEtsN-Wk) [[ejemplo Parpadeo]](./ejemplosBitbloq/parpadeo.xml)
 
@@ -47,7 +54,7 @@ Usaremos la sentencia de control **while** para los bucles donde el número de v
 ### Bloque **if** : sentencias condicionales
 [[vídeo]](http://youtu.be/dXpDCOzsO2U) [[ejemplo]](./ejemplosBitbloq/condicional.xml)
 
-![condicional](./ejemploBitbloq/condicional.png)
+![condicional](./ejemplosBitbloq/condicional.png)
 
 Las sentencias condicionales permiten ejecutar un código y otro según se cumpla o no una determinada condición. Esta condición será una validación que definiremos con operandos.
 
@@ -83,7 +90,3 @@ Podemos definir variables locales o globales. Una variable global estará defini
 
 Las variables globales mantienen su valor entre las distintas iteraciones que se realizan del programa.
 
-
-
-
-tag bitbloq, arduino, programación
