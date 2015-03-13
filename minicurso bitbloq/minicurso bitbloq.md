@@ -5,7 +5,7 @@ Bitbloq es un entorno de programación visual que nos permite crear programas pa
 Podemos acceder directamente desde su web  http://bitbloq.bq.com/
 (En los vídeo se usa la versión beta http://beta-bitbloq.bq.com/, que en breve será la versión estable, ya que mejora mucho la gestión de las conexiones con las placas)
 
-A lo largo de estos vídeos veremos algunas de sus características más importantes.
+A lo largo de estos vídeos veremos algunas de sus características más importantes. Puedes encontrar más tutoriales en la página [oficial de bitbloq](http://diwo.bq.com/tag/bitbloq/)
 
 ## Introducción a la programacion con bitbloq: 
 [[vídeo]](http://youtu.be/3hqwEtsN-Wk) [[ejemplo Parpadeo]](./ejemplosBitbloq/parpadeo.xml)
