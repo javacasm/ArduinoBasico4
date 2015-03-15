@@ -5,7 +5,11 @@ Bitbloq es un entorno de programación visual que nos permite crear programas pa
 Podemos acceder directamente desde su web  http://bitbloq.bq.com/
 (En los vídeo se usa la versión beta http://beta-bitbloq.bq.com/, que en breve será la versión estable, ya que mejora mucho la gestión de las conexiones con las placas)
 
+Como verás cuando entres a su página, funciona con Chrome en todos los sistemas operativos, y el se encarga de avisarte si necesitas drivers o cambiar algo en tu sistema
+
 A lo largo de estos vídeos veremos algunas de sus características más importantes. Puedes encontrar más tutoriales en la página [oficial de bitbloq](http://diwo.bq.com/tag/bitbloq/)
+
+
 
 ## Introducción a la programacion con bitbloq: 
 [[vídeo]](http://youtu.be/3hqwEtsN-Wk) [[ejemplo Parpadeo]](./ejemplosBitbloq/parpadeo.xml)
@@ -90,3 +94,18 @@ Podemos definir variables locales o globales. Una variable global estará defini
 
 Las variables globales mantienen su valor entre las distintas iteraciones que se realizan del programa.
 
+## Ejemplo de bucle sin sentencias de control
+
+![ejemplo](.ejemplosBitbloq/Bitbloq_bucle_globales.png)  [[ejemplo]](.ejemplosBitbloq/bucle_con_variable_global.xml)
+
+Podemos usar la forma cíclica en la que se ejecutan los programas en Arduino para hacer un bucle sin más estructuras de control que una simple variable global
+
+### Sonido
+
+En bitbloq existen 2 formas de generar sonidos
+
+* Reproducir notas musicales: podemos escoger la nota que vamos a reproducir y su duración
+
+* Seleccionar la frecuencia exacta que queremos reproducir y su duración
+
+![imagen](./ejemplosBitbloq/sonido.png) [[ejemplo]](./ejemplosBitbloq/sonido.xml)
