@@ -121,3 +121,10 @@ En el caso de Bitbloq, ahora mismo no se pueden usar librerías, de forma manual
 Para usar la librería Servo con bitbloq podemos usar los bloques Servo. Existen 2 tipos de servos: los de rotación continua y los normales.
 
 
+## Entradas y salidas digitales
+
+![imagen](./ejemplosBitbloq/Pulsador.png) [[ejemplo]](./ejemplosBitbloq/Pulsador.xml)
+
+## Salidas analógicas (PWM)
+
+![imagen](./ejemplosBitbloq/Salida_Analogica.png) [[ejemplo]](./ejemplosBitbloq/Salida_Analogica.xml)
