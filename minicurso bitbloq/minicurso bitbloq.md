@@ -109,3 +109,15 @@ En bitbloq existen 2 formas de generar sonidos
 * Seleccionar la frecuencia exacta que queremos reproducir y su duración
 
 ![imagen](./ejemplosBitbloq/sonido.png) [[ejemplo]](./ejemplosBitbloq/sonido.xml)
+
+## Librerías
+
+En el caso de Bitbloq, ahora mismo no se pueden usar librerías, de forma manual.
+
+### Servo
+
+![imagen](./ejemplosBitbloq/Servo.png) [[ejemplo]](./ejemplosBitbloq/Servo.xml)
+
+Para usar la librería Servo con bitbloq podemos usar los bloques Servo. Existen 2 tipos de servos: los de rotación continua y los normales.
+
+
