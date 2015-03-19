@@ -109,6 +109,9 @@ Del lado de Arduino monta un ATMega32u4 (el que usa Leonardo) que viene siendo e
 * Zum BT-328 desarrollado por Bq. Entre sus virtudes está el tener un interruptor de apagado, soportar 3A de consumo, un dispositivo bluetooth incorporado y pines en 2 formatos lo que facilita el uso. Más información en su [web](http://www.bq.com/es/productos/zum.html)
 
 
+![zero](http://arduino.cc/en/uploads/Main/Arduino_Zero_front450.png)
+* Arduino Zero es la evolución de Arduino UNO hacia los 32 bits. http://arduino.cc/en/Main/ArduinoBoardZero
+
 
 ## Ampliaciones o Shields
 
