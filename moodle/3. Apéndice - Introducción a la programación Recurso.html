@@ -1,0 +1,178 @@
+ <b style="color: rgb(0, 0, 0); font-family: "times new roman"; font-size: medium; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-weight: normal;" id="internal-source-marker_0.9872265073936433"><span >Veamos una breve introducción a la programación, aplicada a Arduino pero que es común con muchos lenguajes en concreto C++</span><br />
+<h2 dir="ltr"><span >Comentarios</span></h2><span >Un comentario es una línea que no influye en nuestro programa pero que nos sirve para documentar nuestro código. Es muy importante comentar nuestro código, puesto que nos ayudará a entender lo que estamos haciendo y si pensamos compartirlo con más gente, les facilitará enormemente la labor de comprender lo que pretendemos hacer.</span><br /><span ></span><br /><span >Existen 2 tipos de comentarios:</span><br /><span ></span><br />
+<ul style="margin-top: 0pt; margin-bottom: 0pt;">
+  <li ><span >El comentario de bloque, todo el contenido entre los símbolos /* y */ será tomado como contenido del comentario</span></li>
+</ul><span ></span><br />
+<p ><span >/* Hola esto es un comentario tan largo y extenso que no cabe en </span></p>
+<p ><span >una sola línea. </span></p>
+<p ><span >*/</span></p><span ></span><br />
+<ul style="margin-top: 0pt; margin-bottom: 0pt;">
+  <li ><span >Línea de comentario: a par tir de las dos barras // se ignorará el contenido hasta la siguiente línea</span></li>
+</ul><span ></span><br />
+<p style="text-indent: 36pt; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span >// Este es un comentario de línea</span></p>
+<h2 dir="ltr"><span >Bloques</span></h2><span >Un bloque es un conjunto de líneas de código que se encuentran encerradas entre dos llaves</span><br />
+<p ><span >{ … }</span></p><span >Más adelante veremos que determinadas sentencias de control incluyen bloques de instrucciones, como por ejemplo las instrucciones de control o las de decisión</span><br />
+<h2 dir="ltr"><span >Variables</span></h2><span >Una variables es una forma de etiquetar y guardar un valor. El valor que contiene puede ser de diferentes tipos, como puede ser un número entero, un número decimal, o un carácter.</span><br /><span >Las variables conservan su valor hasta que lo modificamos.Podemos modificar su valor y a partir de ese momento contendrá ese nuevo valor.</span><br /><span >El tipo de la variable será definido cuando </span><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">declaramos </span><span >la variable por primera vez y a partir de ahí no se modificará. Definiremos la </span><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">asignación </span><span >como el momento en que le damos valor a la variable. Podemos declarar y asignar un valor en la misma sentencia. Veamos ejemplos de declaraciones y asignaciones:</span><br /><span ></span><br />
+<p ><span >int a=10;</span></p>
+<p ><span >float c=10.2;</span></p>
+<p ><span >int b;</span></p>
+<p ><span >b=15;</span></p><span ></span><br /><span >Las variables tiene un </span><span style="font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: bold; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">ámbito </span><span >(scope en inglés) que define la zona del código donde existen. Fuera de esta zona no podemos acceder a su valor. </span><br /><span ></span><br />
+<p ><span >int a=10;</span></p>
+<p ><span >void prueba()</span></p>
+<p ><span >{</span></p>
+<p style="margin-left: 36pt; text-indent: 36pt; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span >float b=10.2*a;</span></p>
+<p ><span >}</span><span ></span></p><span ></span><br /><span >En este ejemplo la variable </span><span >b</span><span > sólo está definida dentro de la función </span><span style="font-size: 16px; font-family: consolas; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">prueba</span><span style="font-size: 16px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">, es decir, no podremos usarla fuera de la misma. En cambio a, al estar definida fuera, también puede ser usada dentro.</span><br /><span ></span><br /><span >Más ejemplos en la </span><a href="http://www.arduino.cc/en/Tutorial/Variables"><span >página de arduino</span></a><span > y en muchas más páginas de internet.</span><br />
+<h2 dir="ltr"><span >Tipos de variables</span></h2><span >Veamos algunos de los tipos de variables existentes. Cada tipo determinado, tiene un rango y una precisión:</span><br />
+<p ><span >byte: 8bits 0 a 255</span></p>
+<p ><span >int: 16bits -32768 a 32767</span></p>
+<p ><span >word: 16bits 0 a 65535</span></p>
+<p ><span >long: 32bits -2x10^6 a 2x10^6</span></p>
+<p ><span >float: guarda decimales -3.4x10^34 a 3.4x10^34</span></p>
+<h2 dir="ltr"><span >¡¡¡Cuidado con los números negativos!!! ¡¡Cuidado con pasarnos!!</span></h2><span >Cuando una variable llega a su límite, tanto superior, como inferior se produce un desbordamiento y continua por el otro límite. Por ejemplo si tenemos una variable de tipo word con valor 0 y le restamos 1 ¡¡¡pasará a tener el valor 65535!!!</span><br />
+<h2 dir="ltr"><span >Operadores aritméticos</span></h2><span >Representa la operación que se realizará entre los valores de la expresión</span><br /><span ></span><br />
+<p style="text-indent: 36pt; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span >+, -, *, /, % (módulo, el resto de la división entre los valores)</span></p><span ></span><br /><span >Ejemplos:</span><br /><span ></span><br />
+<p ><span >a=a+3;</span></p>
+<p ><span >b=a/3;</span></p>
+<p ><span >c=b%3;</span></p>
+<h2 dir="ltr"><span >Operadores</span></h2><br />
+<ul style="margin-top: 0pt; margin-bottom: 0pt;">
+  <li ><span >Operadores Booleanos: &amp;&amp; (AND / Y), || (OR / O ), !(NOT / NO) Representan las operaciones lógicas que podemos aplicar a las condiciones</span></li>
+  <li ><span >Operadores de acceso a punteros: *, &amp; Los usaremos para acceder a memoria</span></li>
+  <li ><span >Operadores de bits: &amp;, |, ^, ~, &lt;&lt;, &gt;&gt; Permiten manipular los bits individuales de las variables representadas en </span><a href="http://es.wikipedia.org/wiki/Binario"><span >lenguaje binario</span></a><span ></span></li>
+  <li ><span >Operadores compuestos:</span></li>
+</ul><br />
+<ul style="margin-top: 0pt; margin-bottom: 0pt;">
+  <ul style="margin-top: 0pt; margin-bottom: 0pt;">
+    <li style="list-style-type: circle; font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span >Incremento/decremento de variables: ++, -- Incrementan/decrementan el valor de la variable</span></li>
+    <li style="list-style-type: circle; font-size: 15px; font-family: arial; color: rgb(0, 0, 0); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;"><span >Asignación y operación: +=, -=, *=, /=, &amp;=, |= Realizan la operación indicada y luego la asignación del resultado a la variable</span></li>
+  </ul>
+</ul>
+<h2 dir="ltr"><span >Array</span></h2><span >Un array es una agrupación de variables con un tipo y un tamaño determinados. Podemos acceder a cada elemento individualmente por medio del operador [], indicando la posición. Empiezan en la posición 0 y la última será la que indica su longitud menos 1.</span><br /><span ></span><br />
+<p ><span >int miArray[5]; //Declaramos un array de 5 elementos enteros</span></p>
+<p ><span >int miOtroArray[]={1,23,2}; <span style="white-space: pre;" class="Apple-tab-span"> </span>// Declaramos un array de 3 elementos con</span></p>
+<p style="margin-left: 180pt; text-indent: 36pt; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span >// los elementos asignados</span></p>
+<h2 dir="ltr"><span >Constantes</span></h2><span >Son variables a las que no podemos modificar al valor. Algunos ejemplos:</span><br /><span ></span><br />
+<p style="margin-left: 72pt; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span >true/false</span></p>
+<p style="margin-left: 72pt; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span >HIGH/LOW</span></p>
+<p style="margin-left: 72pt; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span >INPUT/OUTPUT</span></p><span ></span><br /><span >Conviene usarlas para evitar confusiones.</span><br />
+<h2 dir="ltr"><span >Funciones</span></h2><span >Una función es un conjunto de instrucciones agrupadas para un nombre, al que le pasaremos unos argumentos y devolverá un valor.</span><br /><span ></span><br /><span >¿Por qué usamos funciones?</span><br />
+<ul style="margin-top: 0pt; margin-bottom: 0pt;">
+  <li ><span >Cuando repetimos un fragmento de código</span></li>
+  <li ><span >Ahorro de espacio</span></li>
+  <li ><span >Estructuración</span></li>
+</ul>
+<p ><span >tipo funcion(tipo argumento 1, tipo argumento 2)</span></p>
+<p ><span >{</span></p>
+<p ><span >}</span></p>
+<h2 dir="ltr"><span >Librerias</span></h2><span >Cuando vamos a reutilizar varias veces un código puede ser buena idea que creemos una librería, que no es más que una colección de codigo que empaquetamos de una manera concreta y cuyas funciones podemos utilizar sin más que incluirlas en nuestro código. En el ejemplo se incluye la librería serie que se usa para comunicar el pc con arduino.</span><br /><span ></span><br />
+<p ><span >#include &lt;serial.h&gt;</span></p><span ></span><br /><span >Existen muchas librerías cuyo uso iremos viendo a lo largo del curso</span><br />
+<h2 dir="ltr"><span >Estructuras de control</span></h2><span >Son aquellas estructuras que nos permiten modificar el flujo de ejecución de nuestro programa, es decir el orden en el que se ejecutan las sentencias.</span><br />
+<h2 dir="ltr"><span >Sentencias condicionales</span></h2>
+<h3 dir="ltr"><span>Sentencia if </span></h3><span >Ejecutaremos un código si se cumple la condición y otro distinto si no se cumple</span><br />
+<p ><span >if (condición)</span></p>
+<p ><span >{</span></p>
+<p ><span > // código si se cumple</span></p>
+<p ><span >}</span></p>
+<p ><span >else</span></p>
+<p ><span >{</span></p>
+<p ><span > // código si no se cumple</span></p>
+<p ><span >}</span></p>
+<p ><span ><br /></span></p><span ></span><br /><span >Ejemplo</span><br /><span ></span><br />
+<p ><span >if ((pin4Entrada &lt; 500) &amp;&amp; (pin4Entrada&gt;100))</span></p>
+<p ><span >{</span></p>
+<p ><span > // código A</span></p>
+<p ><span >}</span></p>
+<p ><span >else</span></p>
+<p ><span >{</span></p>
+<p ><span > // código B</span></p>
+<p ><span >}</span></p><span ></span><br />
+<h3 dir="ltr"><span>Sentencia switch</span></h3><span >Dependiendo del valor de una variable ejecutaremos un código distinto</span><br />
+<p ><span >switch (var) {</span></p>
+<p ><span ><span style="white-space: pre;" class="Apple-tab-span"> </span>case 1:</span></p>
+<p ><span > <span style="white-space: pre;" class="Apple-tab-span"> </span>//hacemos algo si var es 1</span></p>
+<p ><span > <span style="white-space: pre;" class="Apple-tab-span"> </span>break;</span></p>
+<p ><span ><span style="white-space: pre;" class="Apple-tab-span"> </span>case 2:</span></p>
+<p ><span > <span style="white-space: pre;" class="Apple-tab-span"> </span>//hacemos algo si var es 2</span></p>
+<p ><span > <span style="white-space: pre;" class="Apple-tab-span"> </span>break;</span></p>
+<p ><span ><span style="white-space: pre;" class="Apple-tab-span"> </span>default:</span></p>
+<p ><span > <span style="white-space: pre;" class="Apple-tab-span"> </span>// si nada concuerda, default</span></p>
+<p ><span > <span style="white-space: pre;" class="Apple-tab-span"> </span>// default es opcional</span></p>
+<p ><span > }</span></p>
+<h2 dir="ltr"><span >Bucles</span></h2><span >Realizamos un bucle siempre que queremos que se repita un determinado fragmento de código. Todo bucle tiene una condición que determinará las veces que se repetirá el código.</span><br /><span >Existen 3 tipos de bucles:</span><br />
+<h3 dir="ltr"><span>Bucle for</span></h3><span >Es el más natural para usar cuando la iteración tiene un número claro de repeticiones:</span><br /><span ></span><br />
+<p ><span >for (inicializacion; condicion; incremento) {</span></p>
+<p ><span >//sentencia(s);</span></p>
+<p ><span >}</span></p><span ></span><br /><span >por ejemplo</span><br /><span ></span><br />
+<p ><span >for (int i=0;i&lt;20;i=i+1) {</span></p>
+<p ><span >//sentencia(s);</span></p>
+<p ><span >}</span></p><span >que se realizará 20 veces</span><br /><span ></span><br /><span>Bucle while</span><br /><span >El bucle while ejecutará las sentencias de su bloque mientras que la condición inicial se cumpla</span><br />
+<p ><span >while(expresion){</span></p>
+<p ><span > // sentencia(s);</span></p>
+<p ><span >}</span></p><span >Si la condición no se cumple inicialmente no se realizará ninguna iteración.</span><br />
+<h3 dir="ltr"><span>Bucle do</span></h3><span >En este bucle la comprobación se hace después de la iteración, por lo que tenemos garantizado que al menos se ejecutará una vez la iteración</span><br />
+<p ><span >do</span></p>
+<p ><span >{</span></p>
+<p ><span ><span style="white-space: pre;" class="Apple-tab-span"> </span>//sentencia(s)</span></p>
+<p ><span >} while (condicion);</span></p><span ></span><br />
+<h3 dir="ltr"><span>Saliendo de los bucles</span></h3><span >De un bucle saldremos cuando no se verifique la condición, pero también podemos formar la salida usando las siguientes instrucciones</span><br />
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/Break"><span>break</span></a><span > <span style="white-space: pre;" class="Apple-tab-span"> </span><span style="white-space: pre;" class="Apple-tab-span"> </span>// sale del bucle</span></p>
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/Continue"><span>continue</span></a><span > <span style="white-space: pre;" class="Apple-tab-span"> </span><span style="white-space: pre;" class="Apple-tab-span"> </span>// salta el paso actual del bucle</span></p>
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/Return"><span>return</span></a><span > <span style="white-space: pre;" class="Apple-tab-span"> </span><span style="white-space: pre;" class="Apple-tab-span"> </span>// sale de la función</span></p>
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/Goto"><span>goto</span></a><span > label <span style="white-space: pre;" class="Apple-tab-span"> </span>//salta a la etiqueta label</span></p><span ></span><br />
+<p ><span >for(int i=0;i&lt;10;i++)</span></p>
+<p ><span >{</span></p>
+<p style="margin-left: 72pt; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span >if (bsalto&gt;0)</span></p>
+<p style="margin-left: 72pt; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span > continue; // Se salta el código del resto de la iteración</span></p>
+<p style="margin-left: 72pt; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span >else</span></p>
+<p style="margin-left: 72pt; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span > break; //sale del bucle</span></p>
+<p ><span >}</span></p><span ></span><br />
+<h2 dir="ltr"><span >String: o cadenas de caracteres</span></h2><span >Para facilitar el trabajo con cadenas de caracteres, existe la case </span><a href="http://arduino.cc/en/Reference/StringObject"><span >String</span></a><span >. Tiene los siguientes métodos</span><br /><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br />
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/StringCompareTo"><span>compareTo</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() <span style="white-space: pre;" class="Apple-tab-span"> </span>//compara dos cadenas</span></p>
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/StringConcat"><span>concat</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() <span style="white-space: pre;" class="Apple-tab-span"> </span><span style="white-space: pre;" class="Apple-tab-span"> </span>// concatena</span></p>
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/StringEndsWith"><span>endsWith</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() <span style="white-space: pre;" class="Apple-tab-span"> </span>// comprueba si termina por...</span></p>
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/StringEquals"><span>equals</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() <span style="white-space: pre;" class="Apple-tab-span"> </span><span style="white-space: pre;" class="Apple-tab-span"> </span>//comprueba si son iguales</span></p>
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/StringEqualsIgnoreCase"><span>equalsIgnoreCase</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() //comprueba igualdad ignorando mayúsculas y minúsculas</span></p>
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/StringIndexOf"><span>indexOf</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() // devuelve la primera posición del carácter que le pasamos</span></p>
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/StringLastIndexOf"><span>lastIndexOf</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() // devuelve la última posición del carácter que le pasamos</span></p>
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/StringLength"><span>length</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() //longitud de la cadena</span></p>
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/StringReplace"><span>replace</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() //reemplaza</span></p>
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/StringStartsWith"><span>startsWith</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() //comprueba si empieza por</span></p>
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/StringSubstring"><span>substring</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() // devuelve un fragmento de la cadena original</span></p>
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/StringToLowerCase"><span>toLowerCase</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() //convierte a minúsculas<br class="kix-line-break" /></span><span >•</span><a href="http://arduino.cc/en/Reference/StringToUpperCase"><span>toUpperCase</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() //convierte a mayúsculas</span></p>
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/StringTrim"><span>trim</span></a><span style="font-size: 15px; font-family: consolas; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">() //elimina los espacios iniciales y finales</span></p> <span style="font-size: 15px; font-family: georgia; color: rgb(85, 85, 85); background-color: transparent; font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"></span><br />
+<h2 dir="ltr"><span >Conversiones de tipos</span></h2><span >Muchas veces es necesario convertir valores de variables de tipos diferentes. Para eso existen en arduino un conjunto de funciones que nos permiten hacer estas transformaciones con garantías:</span><br />
+<p ><span >char() // Convierte a un carácterer</span></p>
+<p ><span >byte() // Convierte a un byte</span></p>
+<p ><span >int() // Convierte a un int</span></p>
+<p ><span >word() // Convierte a un word</span></p>
+<p ><span >long() // Convierte a un long</span></p>
+<p ><span >float() // Convierte a un número decimal</span></p><span ></span><br /><span >Por ejemplo, veamos como convierte a entero. Obviamente perdemos la parte decimal.</span><br />
+<p ><span >float a=2.4;</span></p>
+<p ><span >int b=int(a);</span></p><span ></span><br />
+<h2 dir="ltr"><span >Funciones matemáticas</span></h2><span >Aunque el procesador de arduino no excesivamente potente en lo que a cálculo matemático se refiere, existen librerías que nos permiten hacer la mayoría de las funciones matemáticas usuales:</span><br />
+<h3 dir="ltr"><span>Matemáticas</span></h3>
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/Min"><span >min</span></a><span >(a,b) <span style="white-space: pre;" class="Apple-tab-span"> </span>// mínimo de a y b</span></p>
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/Max"><span >max</span></a><span >(a,b)<span style="white-space: pre;" class="Apple-tab-span"> </span>// máximo de a y b</span></p>
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/Abs"><span >abs</span></a><span >(a)<span style="white-space: pre;" class="Apple-tab-span"> </span><span style="white-space: pre;" class="Apple-tab-span"> </span>// valor absoluto d ea</span></p>
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/Pow"><span >pow</span></a><span >(a,b)<span style="white-space: pre;" class="Apple-tab-span"> </span>// devuelve a^b</span></p>
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/Sqrt"><span >sqrt</span></a><span >(a)<span style="white-space: pre;" class="Apple-tab-span"> </span>// devuelve la raiz cuadrada de a</span></p>
+<h3 dir="ltr"><span>Trigonometría</span></h3>
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/Sin"><span >sin</span></a><span >(a)<span style="white-space: pre;" class="Apple-tab-span"> </span><span style="white-space: pre;" class="Apple-tab-span"> </span>// calcula el seno de a<span style="white-space: pre;" class="Apple-tab-span"> </span><span style="white-space: pre;" class="Apple-tab-span"> </span></span></p>
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/Cos"><span >cos</span></a><span >(a)<span style="white-space: pre;" class="Apple-tab-span"> </span><span style="white-space: pre;" class="Apple-tab-span"> </span>// calcula el coseno de a</span></p>
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/Tan"><span >tan</span></a><span >(a)<span style="white-space: pre;" class="Apple-tab-span"> </span><span style="white-space: pre;" class="Apple-tab-span"> </span>// calcula la tangente de a</span></p>
+<h3 dir="ltr"><span>Números aleatorios</span></h3>
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/RandomSeed"><span >randomSeed</span></a><span >(a)<span style="white-space: pre;" class="Apple-tab-span"> </span>// inicializa los número aleatorios con a</span></p>
+<p ><span >•</span><a href="http://arduino.cc/en/Reference/Random"><span >random</span></a><span >()<span style="white-space: pre;" class="Apple-tab-span"> </span><span style="white-space: pre;" class="Apple-tab-span"> </span>// devuelve un número aleatorio</span></p><span ></span><br /><span >Obviamente, dada la poca capacidad de cálculo de arduino, el usar estas funciones matemáticas complejas es muy costoso computacionalmente, por lo que se debería de evitar u optimizar su uso.</span><br />
+<h2 dir="ltr"><span >Introducción a la programación de objetos</span></h2><span >Un objeto es un conjunto de funciones (métodos) y variables (atributos) que trataremos de una </span><br /><span >forma global.</span><br /><span ></span><br /><span >El trabajar con objetos nos permite encapsular (esconder las interioridades), mostrando un interface (una vista) con lo que permitimos que otros vean (atributos públicos) y usen (métodos públicos) de nosotros.</span><br /><span ></span><br /><span >A los que los usamos nos facilitan el trabajo al agrupar las funcionalidades.</span><br /><span >Por ejemplo el objeto Serial, permite trabajar con todo lo relacionado con el manejo de los puertos serie:</span><br />
+<ul style="margin-top: 0pt; margin-bottom: 0pt;">
+  <li ><span >Serial.print enviará por el puerto serie</span></li>
+  <li ><span >Serial.read leerá por el puerto serie</span></li>
+  <li ><span >Serial.write escribirá...</span></li>
+</ul><span ></span><br /><span >La mayoría de las librerías de arduino están formadas por objetos.</span><br />
+<h2 dir="ltr"><span >¿Donde encontrar más información?</span></h2><br />
+<ul style="margin-top: 0pt; margin-bottom: 0pt;">
+  <li ><a href="http://arduino.cc/"><span >arduino</span></a></li>
+  <li ><a href="http://arduino.cc/playground/uploads/Main/arduino_notebook_v1-1.pdf"><span >arduino programing notebook (inglés)</span></a></li>
+  <li ><a href="http://books.openlibra.com/pdf/Manual-Programacion-Arduino.pdf"><span >Guía de programación de arduino (español)</span></a></li>
+  <li ><a href="http://www.freeduino.org/"><span >freeduino</span></a><span ></span></li>
+</ul></b><br class="Apple-interchange-newline" /> 
